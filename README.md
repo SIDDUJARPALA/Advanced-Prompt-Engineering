@@ -1,6 +1,6 @@
 
 # Advanced Prompt Engineering: Techniques, Implementation and Analysis
-
+<img width="1920" height="970" alt="Image" src="https://github.com/user-attachments/assets/c4effda5-ff98-4df3-a8a3-92b1482eeefb" />
 ## Objective
 
 This project demonstrates how prompt design can change the accuracy, consistency,
