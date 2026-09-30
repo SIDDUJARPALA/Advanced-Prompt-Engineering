@@ -1,0 +1,85 @@
+{
+    "zero_shot": [
+        {
+            "technique": "Zero-Shot Prompting",
+            "domain": "Education",
+            "prompt": "Explain recursion in Python to a beginner using a simple example.",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "analysis": "The model receives a task directly, without examples to imitate."
+        },
+        {
+            "technique": "Zero-Shot Prompting",
+            "domain": "Software Development",
+            "prompt": "Explain the difference between a list and tuple in Python.",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "analysis": "The model receives a task directly, without examples to imitate."
+        },
+        {
+            "technique": "Zero-Shot Prompting",
+            "domain": "Career Guidance",
+            "prompt": "Give five practical tips for preparing for a technical interview.",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "analysis": "The model receives a task directly, without examples to imitate."
+        }
+    ],
+    "few_shot": [
+        {
+            "technique": "Few-Shot Prompting",
+            "domain": "Education",
+            "prompt": "Classify each statement as Positive or Negative. Follow the examples.\n\nInput: I love this course.\nOutput: Positive\n\nInput: The explanation was confusing.\nOutput: Negative\n\nInput: The instructor explained the topic clearly.\nOutput:",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "analysis": "The examples demonstrate the requested labels and output format before the new input.",
+            "examples": "Input: I love this course.\nOutput: Positive\n\nInput: The explanation was confusing.\nOutput: Negative",
+            "final_input": "The instructor explained the topic clearly."
+        }
+    ],
+    "structured_reasoning": [],
+    "role_based": [],
+    "iterative": [],
+    "prompt_chaining": [
+        {
+            "technique": "Prompt Chaining",
+            "domain": "Career Guidance",
+            "prompt": "Extract the important skills from this job description as a concise list. Do not add skills that are not stated.\n\nJob description:\nJunior AI developer. Required skills: Python, SQL, Git, machine learning, clear written communication, and teamwork.",
+            "stages": [
+                {
+                    "name": "Stage 1 - Extract",
+                    "prompt": "Extract the important skills from this job description as a concise list. Do not add skills that are not stated.\n\nJob description:\nJunior AI developer. Required skills: Python, SQL, Git, machine learning, clear written communication, and teamwork.",
+                    "response": "ERROR: Mistral API request failed (SDKError)."
+                },
+                {
+                    "name": "Stage 2 - Analyze",
+                    "prompt": "Categorize only these extracted skills under Programming, Data, Tools, and Soft Skills. Preserve the provided information:\n\nERROR: Mistral API request failed (SDKError).",
+                    "response": "ERROR: Mistral API request failed (SDKError)."
+                },
+                {
+                    "name": "Stage 3 - Generate",
+                    "prompt": "Create a practical one-week study plan based only on these categorized skills. Use one focus per day and include a small practice activity:\n\nERROR: Mistral API request failed (SDKError).",
+                    "response": "ERROR: Mistral API request failed (SDKError)."
+                }
+            ],
+            "analysis": "Each prompt consumes the preceding stage's response: extracted skills are categorized, then the categories ground the study plan."
+        }
+    ],
+    "negative_prompting": [
+        {
+            "technique": "Negative Prompting",
+            "domain": "Education",
+            "prompt": "Create a beginner-friendly Python learning plan.\n\nRules:\n- Do not invent certifications.\n- Do not claim the learner has professional experience.\n- Do not include irrelevant technologies.\n- Do not use unnecessary motivational statements.\n- Keep the answer concise.\n- Use bullet points.",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "analysis": "Restrictions target fabricated credentials or experience, irrelevant content, unwanted motivational filler, and formatting drift."
+        }
+    ],
+    "reusable_template": [],
+    "json_output": [
+        {
+            "technique": "JSON Output Prompting",
+            "domain": "Career Guidance",
+            "prompt": "Analyze the following candidate profile.\n\nReturn ONLY valid JSON using exactly this structure:\n{\n    \"skills\": [],\n    \"education\": [],\n    \"experience_level\": \"\",\n    \"strengths\": [],\n    \"areas_to_improve\": []\n}\n\nDo not include Markdown.\nDo not include explanations outside the JSON.\nDo not invent information. If information is not provided, use an empty list\nor an empty string as appropriate.\n\nCandidate profile:\nPython developer fresher with knowledge of Python, SQL and Git.",
+            "response": "ERROR: Mistral API request failed (SDKError).",
+            "valid_json": false,
+            "parsed_json": null,
+            "analysis": "A defined schema encourages machine-readable output. JSON parsing failed: Expecting value: line 1 column 1 (char 0)"
+        }
+    ]
+}
