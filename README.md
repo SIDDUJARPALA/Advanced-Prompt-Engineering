@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Advanced Prompt Engineering: Techniques, Implementation and Analysis
 
 ## Objective
@@ -112,3 +113,7 @@ outputs should be reviewed rather than assumed correct.
 The project shows that instructions, examples, roles, constraints, templates, and
 multi-stage workflows shape how an LLM responds. Comparing techniques helps select
 a prompt design that fits the required task and output.
+=======
+# Advanced-Prompt-Engineering
+Advanced-Prompt-Engineering
+>>>>>>> 4b4a8e2cfbc7d885ec8342b7fd1ced997d9ca4cb
